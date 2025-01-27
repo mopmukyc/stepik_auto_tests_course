@@ -1,0 +1,42 @@
+
+#   select_by_value(value)
+#   Например ищем элемент с текстом "Python"
+    from selenium.webdriver.support.ui import Select
+    select = Select(browser.find_element(By.TAG_NAME, "select"))
+    select.select_by_value("1") 
+
+#   Можно использовать еще два метода: 
+#   select.select_by_visible_text("text")
+    Способ ищет элемент по видимому тексту, например, select.select_by_visible_text("Python") 
+    найдёт "Python" для нашего примера.
+    
+#   select.select_by_index(index)
+    Способ ищет элемент по его индексу или порядковому номеру. 
+    Индексация начинается с нуля. Для того чтобы найти элемент с текстом "Python",
+    нужно использовать select.select_by_index(1),
+    так как опция с индексом 0 в данном примере имеет значение по умолчанию равное "--".
+
+#  Explicit Waits
+#  ( WebDriverWait и expected_conditions )
+# 
+# В модуле expected_conditions ( EC ) есть много других правил,
+# которые позволяют реализовать необходимые ожидания
+# Описание https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions
+
+    title_is
+    title_contains
+    presence_of_element_located
+    visibility_of_element_located
+    visibility_of
+    presence_of_all_elements_located
+    text_to_be_present_in_element
+    text_to_be_present_in_element_value
+    frame_to_be_available_and_switch_to_it
+    invisibility_of_element_located
+    element_to_be_clickable
+    staleness_of
+    element_to_be_selected
+    element_located_to_be_selected
+    element_selection_state_to_be
+    element_located_selection_state_to_be
+    alert_is_present
